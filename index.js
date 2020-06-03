@@ -28,7 +28,7 @@ bot.on('message', msg => {
     msg.channel.send('<@' + members.random(2)[0].user.id + "> <3 " + "<@" + members.random(2)[1].user.id + ">")
 
   } else if (msg.content === '!dare') {
-    var members = msg.guild.members.filter(member => member.user.username != "shipper-bot"})
+    var members = msg.guild.members.filter(member => member.user.username != "shipper-bot")
     console.log(members)
     var textByLine = fs.readFileSync('dares.txt').toString().split("\r\n");
     var count = textByLine.length
